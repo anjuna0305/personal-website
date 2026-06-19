@@ -1,0 +1,42 @@
+#profile-photo {
+    width: 600px;
+}
+
+.coding-gallery {
+    img {
+        height: 64px;
+        padding: 4p;
+    }
+}
+
+.movie-gallery {
+    img {
+        height: 300px;
+        padding: 4p;
+    }
+}
+.weighlifting-gallery {
+    img {
+        height: 300px;
+        padding: 4p;
+    }
+}
+
+#lifting-stat-table {
+    table {
+        border: 1px solid black;
+    }
+    th {
+        border: 1px solid black;
+    }
+    td {
+        text-align: center;
+        width: 160px;
+        border: 1px solid black;
+    }
+}
+
+.content-body {
+    align-content: center;
+    width: 600px;
+}
