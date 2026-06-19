@@ -1,34 +1,59 @@
+:root {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0.5rem;
+}
+
+h2 {
+    border-bottom: 1px solid black;
+}
+.content-body {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
 #profile-photo {
-    width: 600px;
+    max-width: 100%;
+    height: auto;
 }
 
 .coding-gallery {
+    display: flex;
+    flex-wrap: wrap;
     img {
         height: 64px;
-        padding: 4p;
+        padding: 4px;
     }
 }
 
 .movie-gallery {
+    display: flex;
+    flex-wrap: wrap;
     img {
         height: 300px;
-        padding: 4p;
+        padding: 4px;
     }
 }
+
 .weighlifting-gallery {
+    display: flex;
+    flex-wrap: wrap;
     img {
         height: 300px;
-        padding: 4p;
+        padding: 4px;
     }
 }
 
 #lifting-stat-table {
-    table {
-        border: 1px solid black;
-    }
-    th {
-        border: 1px solid black;
-    }
+    display: block;
+    overflow-x: auto;
+    th,
     td {
         text-align: center;
         width: 160px;
@@ -36,7 +61,11 @@
     }
 }
 
-.content-body {
-    align-content: center;
-    width: 600px;
+@media (max-width: 600px) {
+    .movie-gallery img {
+        height: 150px;
+    }
+    .weighlifting-gallery img {
+        height: 150px;
+    }
 }
