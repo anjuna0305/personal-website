@@ -4,9 +4,22 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="styles.css" />
+        <script src="script.js" defer></script>
         <title>My name is Anjuna</title>
     </head>
     <body>
+        <!--image preview-->
+        <div id="image-preview-container">
+            <div id="preview-div">
+                <img id="preview" src="" alt="" />
+            </div>
+
+            <button id="preview-container-close-button" class="close-button">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <!--navbar-->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -132,57 +145,108 @@
                     <!--platform-->
                     <div class="coding-gallery">
                         <img
-                            src="assets/coding/fedora-btw.png"
+                            src="assets/coding/fedora-btw-lowq.png"
+                            data-highq="assets/coding/fedora-btw.png"
                             alt="Fedora Linux"
                         />
                         <img
-                            src="assets/coding/foss.jpeg"
+                            src="assets/coding/foss-lowq.jpeg"
+                            data-highq="assets/coding/foss.jpeg"
                             alt="Free and Open Source Software"
                         />
                     </div>
                     <!--languages-->
                     <div class="coding-gallery">
-                        <img src="assets/coding/ts-lowq.png" alt="TypeScript" />
-                        <img src="assets/coding/java-lowq.png" alt="Java" />
-                        <img src="assets/coding/go-lowq.jpg" alt="Go" />
-                        <img src="assets/coding/c-lowq.png" alt="C" />
-                        <img src="assets/coding/cpp-lowq.png" alt="C++" />
+                        <img
+                            src="assets/coding/ts-lowq.png"
+                            data-highq="assets/coding/ts.png"
+                            alt="TypeScript"
+                        />
+                        <img
+                            src="assets/coding/java-lowq.png"
+                            data-highq="assets/coding/java.png"
+                            alt="Java"
+                        />
+                        <img
+                            src="assets/coding/go-lowq.jpg"
+                            data-highq="assets/coding/go.jpg"
+                            alt="Go"
+                        />
+                        <img
+                            src="assets/coding/c-lowq.png"
+                            data-highq="assets/coding/c.png"
+                            alt="C"
+                        />
+                        <img
+                            src="assets/coding/cpp-lowq.png"
+                            data-highq="assets/coding/cpp.png"
+                            alt="C++"
+                        />
                     </div>
                     <!--coding tools-->
                     <div class="coding-gallery">
                         <img
                             src="assets/coding/zed-lowq.png"
+                            data-highq="assets/coding/zed.png"
                             alt="Zed Editor"
                         />
                         <img
                             src="assets/coding/vscode-lowq.jpeg"
+                            data-highq="assets/coding/vscode.jpeg"
                             alt="Visual Studio Code"
                         />
                         <img src="assets/coding/vim.svg" alt="Vim" />
                         <img src="assets/coding/nvim.svg" alt="Neovim" />
-                        <img src="assets/coding/git-lowq.png" alt="Git" />
-                        <img src="assets/coding/gimp-lowq.png" alt="GIMP" />
+                        <img
+                            src="assets/coding/git-lowq.png"
+                            data-highq="assets/coding/git.png"
+                            alt="Git"
+                        />
+                        <img
+                            src="assets/coding/gimp-lowq.png"
+                            data-highq="assets/coding/gimp.png"
+                            alt="GIMP"
+                        />
                     </div>
                     <!--platforms-->
                     <div class="coding-gallery">
-                        <img src="assets/coding/docker-lowq.png" alt="Docker" />
-                        <img src="assets/coding/nginx-lowq.png" alt="Nginx" />
+                        <img
+                            src="assets/coding/docker-lowq.png"
+                            data-highq="assets/coding/docker.png"
+                            alt="Docker"
+                        />
+                        <img
+                            src="assets/coding/nginx-lowq.png"
+                            data-highq="assets/coding/nginx.png"
+                            alt="Nginx"
+                        />
                         <img src="assets/coding/github.svg" alt="GitHub" />
-                        <img src="assets/coding/gitlab-lowq.png" alt="GitLab" />
+                        <img
+                            src="assets/coding/gitlab-lowq.png"
+                            data-highq="assets/coding/gitlab.png"
+                            alt="GitLab"
+                        />
                     </div>
                     <!--frameworks-->
                     <div class="coding-gallery">
-                        <img src="assets/coding/reactjs-lowq.png" alt="React" />
+                        <img
+                            src="assets/coding/reactjs-lowq.png"
+                            data-highq="assets/coding/reactjs.png"
+                            alt="React"
+                        />
                         <img
                             src="assets/coding/spirng-boot-lowq.png"
+                            data-highq="assets/coding/spirng-boot.png"
                             alt="Spring Boot"
                         />
                         <img
                             src="assets/coding/nextjs-lowq.jpg"
+                            data-highq="assets/coding/nextjs.jpg"
                             alt="Next.js"
                         />
                         <img
                             src="assets/coding/mui-lowq.png"
+                            data-highq="assets/coding/mui.png"
                             alt="Material UI"
                         />
                     </div>
@@ -190,10 +254,12 @@
                     <div class="coding-gallery">
                         <img
                             src="assets/coding/block-firefox-lowq.jpg"
+                            data-highq="assets/coding/block-firefox.jpg"
                             alt="Block Firefox"
                         />
                         <img
                             src="assets/coding/f-microsoft-lowq.jpg"
+                            data-highq="assets/coding/f-microsoft.jpg"
                             alt="Fuck Microsoft"
                         />
                     </div>
@@ -240,10 +306,12 @@
                     <div class="weighlifting-gallery">
                         <img
                             src="assets/weightlifting/interfac1-lowq.jpg"
+                            data-highq="assets/weightlifting/interfac1.jpg"
                             alt=""
                         />
                         <img
                             src="assets/weightlifting/interfac2-lowq.jpg"
+                            data-highq="assets/weightlifting/interfac2.jpg"
                             alt=""
                         />
                     </div>
@@ -263,25 +331,56 @@
                         <u>Top 10 movies (IMO)</u>
                     </p>
                     <div class="movie-gallery">
-                        <img src="assets/movie/interstellar-300h.jpeg" alt="" />
-                        <img src="assets/movie/pulp-fiction-300h.jpg" alt="" />
-                        <img src="assets/movie/killbill-300h.jpg" alt="" />
-                        <img src="assets/movie/suriya-arana-300h.jpeg" alt="" />
                         <img
-                            src="assets/movie/the-godfather-2-300h.jpeg"
+                            src="assets/movie/interstellar-300h.jpeg"
+                            data-highq="assets/movie/interstellar.jpeg"
+                            alt=""
+                        />
+                        <img
+                            src="assets/movie/pulp-fiction-300h.jpg"
+                            data-highq="assets/movie/pulp-fiction.jpg"
+                            alt=""
+                        />
+                        <img
+                            src="assets/movie/killbill-300h.jpg"
+                            data-highq="assets/movie/killbill.jpg"
+                            alt=""
+                        />
+                        <img
+                            src="assets/movie/suriya-arana-300h.jpeg"
+                            data-highq="assets/movie/suriya-arana.jpeg"
                             alt=""
                         />
                         <img
                             src="assets/movie/the-godfather-2-300h.jpeg"
+                            data-highq="assets/movie/the-godfather-2.jpeg"
+                            alt=""
+                        />
+                        <img
+                            src="assets/movie/the-godfather-2-300h.jpeg"
+                            data-highq="assets/movie/the-godfather-2.jpeg"
                             alt=""
                         />
                         <img
                             src="assets/movie/the-dark-knight-300h.jpg"
+                            data-highq="assets/movie/the-dark-knight.jpg"
                             alt=""
                         />
-                        <img src="assets/movie/lalaland-300h.jpg" alt="" />
-                        <img src="assets/movie/machan-300h.jpg" alt="" />
-                        <img src="assets/movie/balck-swan-300h.jpg" alt="" />
+                        <img
+                            src="assets/movie/lalaland-300h.jpg"
+                            data-highq="assets/movie/lalaland.jpg"
+                            alt=""
+                        />
+                        <img
+                            src="assets/movie/machan-300h.jpg"
+                            data-highq="assets/movie/machan.jpg"
+                            alt=""
+                        />
+                        <img
+                            src="assets/movie/balck-swan-300h.jpg"
+                            data-highq="assets/movie/balck-swan.jpg"
+                            alt=""
+                        />
                     </div>
                     <p>
                         I have tried to make some short films, those are just

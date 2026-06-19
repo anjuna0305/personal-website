@@ -53,11 +53,65 @@ h2 {
 #lifting-stat-table {
     display: block;
     overflow-x: auto;
+    border-collapse: collapse;
     th,
     td {
         text-align: center;
         width: 160px;
+        height: 32px;
         border: 1px solid black;
+    }
+}
+
+#image-preview-container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    position: fixed;
+    width: calc(100vw - 5rem);
+    height: calc(100vh - 5rem);
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    #preview-div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #preview {
+        width: calc(100% - 2rem);
+        height: calc(100% - 2rem);
+        object-fit: contain;
+    }
+
+    #preview-container-close-button {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+}
+
+.closed {
+    display: none;
+}
+
+.close-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    span {
+        font-size: 2rem;
     }
 }
 
