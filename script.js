@@ -6,11 +6,13 @@ const previewCloseButton = document.getElementById(
 const previewImage = document.getElementById("preview");
 
 function displayPreviewContainer() {
+  previewContainer.style.display = "";
   previewContainer.classList.remove("closed");
   document.addEventListener("click", closeOnOutsideClick);
 }
 
 function hidePreviewContainer() {
+  previewContainer.style.display = "none";
   previewContainer.classList.add("closed");
   document.removeEventListener("click", closeOnOutsideClick);
 }
